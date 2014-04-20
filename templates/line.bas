@@ -1,0 +1,20 @@
+symbol dis = {{dis}}
+symbol pause_time = dis * 1000
+
+main:
+	goto doLine
+
+
+doLine:
+	forward A
+	forward B
+	pause pause_time
+	goto doStop
+	
+doStop:
+	halt A
+	halt B
+	goto finally
+	
+finally:
+	end
